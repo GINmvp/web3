@@ -23,21 +23,21 @@ pragma solidity ^0.8.24;
 */
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+contract WETH is ERC20("dog", "GB") {
+    mapping(address => uint) public userAmount;
 
-contract WETH is ERC20("dog","GB"){
-
-    mapping(address=>uint) public userAmount;
     /**
     铸币函数
-    */ 
-    function mint(address _address,uint _count) internal {
-        _mint(_address,_count);
+    */
+    function mint(address _address, uint _count) internal {
+        _mint(_address, _count);
     }
+
     /**
     销毁函数
-    */ 
-    function burn(address _address,uint _count) internal {
-        _burn(_address,_count);
+    */
+    function burn(address _address, uint _count) internal {
+        _burn(_address, _count);
     }
 
     /**
@@ -47,9 +47,9 @@ contract WETH is ERC20("dog","GB"){
     */
     function save() public payable {
         uint amount = msg.value;
-        require(amount > 0,"amount should > 0");
+        require(amount > 0, "amount should > 0");
         userAmount[msg.sender] += amount;
-        mint(msg.sender,amount);
+        mint(msg.sender, amount);
     }
 
     /**
@@ -61,14 +61,13 @@ contract WETH is ERC20("dog","GB"){
     function withdrew(uint _amount) public payable {
         uint balance = balanceOf(msg.sender);
         address _add = msg.sender;
-        require(balance >= _amount,"you have no enough GB");
+        require(balance >= _amount, "you have no enough GB");
 
-        burn(msg.sender,_amount);
+        burn(msg.sender, _amount);
         userAmount[_add] -= _amount;
         payable(_add).transfer(_amount);
     }
-    
-}// SPDX-License-Identifier: MIT
+} // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 /**
@@ -93,21 +92,21 @@ pragma solidity ^0.8.24;
 */
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+contract WETH is ERC20("dog", "GB") {
+    mapping(address => uint) public userAmount;
 
-contract WETH is ERC20("dog","GB"){
-
-    mapping(address=>uint) public userAmount;
     /**
     铸币函数
-    */ 
-    function mint(address _address,uint _count) internal {
-        _mint(_address,_count);
+    */
+    function mint(address _address, uint _count) internal {
+        _mint(_address, _count);
     }
+
     /**
     销毁函数
-    */ 
-    function burn(address _address,uint _count) internal {
-        _burn(_address,_count);
+    */
+    function burn(address _address, uint _count) internal {
+        _burn(_address, _count);
     }
 
     /**
@@ -117,9 +116,9 @@ contract WETH is ERC20("dog","GB"){
     */
     function save() public payable {
         uint amount = msg.value;
-        require(amount > 0,"amount should > 0");
+        require(amount > 0, "amount should > 0");
         userAmount[msg.sender] += amount;
-        mint(msg.sender,amount);
+        mint(msg.sender, amount);
     }
 
     /**
@@ -131,14 +130,13 @@ contract WETH is ERC20("dog","GB"){
     function withdrew(uint _amount) public payable {
         uint balance = balanceOf(msg.sender);
         address _add = msg.sender;
-        require(balance >= _amount,"you have no enough GB");
+        require(balance >= _amount, "you have no enough GB");
 
-        burn(msg.sender,_amount);
+        burn(msg.sender, _amount);
         userAmount[_add] -= _amount;
         payable(_add).transfer(_amount);
     }
-    
-}// SPDX-License-Identifier: MIT
+} // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 /**
@@ -163,21 +161,21 @@ pragma solidity ^0.8.24;
 */
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+contract WETH is ERC20("dog", "GB") {
+    mapping(address => uint) public userAmount;
 
-contract WETH is ERC20("dog","GB"){
-
-    mapping(address=>uint) public userAmount;
     /**
     铸币函数
-    */ 
-    function mint(address _address,uint _count) internal {
-        _mint(_address,_count);
+    */
+    function mint(address _address, uint _count) internal {
+        _mint(_address, _count);
     }
+
     /**
     销毁函数
-    */ 
-    function burn(address _address,uint _count) internal {
-        _burn(_address,_count);
+    */
+    function burn(address _address, uint _count) internal {
+        _burn(_address, _count);
     }
 
     /**
@@ -187,9 +185,9 @@ contract WETH is ERC20("dog","GB"){
     */
     function save() public payable {
         uint amount = msg.value;
-        require(amount > 0,"amount should > 0");
+        require(amount > 0, "amount should > 0");
         userAmount[msg.sender] += amount;
-        mint(msg.sender,amount);
+        mint(msg.sender, amount);
     }
 
     /**
@@ -201,14 +199,13 @@ contract WETH is ERC20("dog","GB"){
     function withdrew(uint _amount) public payable {
         uint balance = balanceOf(msg.sender);
         address _add = msg.sender;
-        require(balance >= _amount,"you have no enough GB");
+        require(balance >= _amount, "you have no enough GB");
 
-        burn(msg.sender,_amount);
+        burn(msg.sender, _amount);
         userAmount[_add] -= _amount;
         payable(_add).transfer(_amount);
     }
-    
-}// SPDX-License-Identifier: MIT
+} // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 /**
@@ -233,21 +230,21 @@ pragma solidity ^0.8.24;
 */
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+contract WETH is ERC20("dog", "GB") {
+    mapping(address => uint) public userAmount;
 
-contract WETH is ERC20("dog","GB"){
-
-    mapping(address=>uint) public userAmount;
     /**
     铸币函数
-    */ 
-    function mint(address _address,uint _count) internal {
-        _mint(_address,_count);
+    */
+    function mint(address _address, uint _count) internal {
+        _mint(_address, _count);
     }
+
     /**
     销毁函数
-    */ 
-    function burn(address _address,uint _count) internal {
-        _burn(_address,_count);
+    */
+    function burn(address _address, uint _count) internal {
+        _burn(_address, _count);
     }
 
     /**
@@ -257,9 +254,9 @@ contract WETH is ERC20("dog","GB"){
     */
     function save() public payable {
         uint amount = msg.value;
-        require(amount > 0,"amount should > 0");
+        require(amount > 0, "amount should > 0");
         userAmount[msg.sender] += amount;
-        mint(msg.sender,amount);
+        mint(msg.sender, amount);
     }
 
     /**
@@ -271,11 +268,10 @@ contract WETH is ERC20("dog","GB"){
     function withdrew(uint _amount) public payable {
         uint balance = balanceOf(msg.sender);
         address _add = msg.sender;
-        require(balance >= _amount,"you have no enough GB");
+        require(balance >= _amount, "you have no enough GB");
 
-        burn(msg.sender,_amount);
+        burn(msg.sender, _amount);
         userAmount[_add] -= _amount;
         payable(_add).transfer(_amount);
     }
-    
 }
